@@ -3,7 +3,13 @@ return {
         {"hrsh7th/cmp-buffer"},
         { "hrsh7th/cmp-path" },
         {"hrsh7th/cmp-cmdline"},
-        {"f3fora/cmp-spell"},
+        {
+                "f3fora/cmp-spell",
+                config = function ()
+                        vim.opt.spell = true
+                        vim.opt.spelllang = { "en_us" }
+                end,
+        },
         {"hrsh7th/cmp-calc"},
 
         {"saadparwaiz1/cmp_luasnip"},
