@@ -27,7 +27,7 @@ return {
 					function()
 						return {
 							exe = "verible-verilog-format",
-							args = { "--indentation_spaces 4", "-" },
+							args = { "--indentation_spaces 8", "-" },
 							stdin = true,
 						}
 					end,
