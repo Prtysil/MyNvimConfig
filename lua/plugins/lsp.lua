@@ -28,9 +28,11 @@ return {
         {
                 "neovim/nvim-lspconfig",
                 config = function()
-                        require("lspconfig").lua_ls.setup({})
-                        require("lspconfig").clangd.setup({})
-                        require("lspconfig").verible.setup({})
+                        -- Set up lspconfig.
+                        local capabilities = require('cmp_nvim_lsp').default_capabilities() -- More details see https://github.com/hrsh7th/nvim-cmp
+                        require("lspconfig").lua_ls.setup({ capabilities = capabilities })
+                        require("lspconfig").clangd.setup({ capabilities = capabilities })
+                        require("lspconfig").verible.setup({ capabilities = capabilities })
                 end,
         },
 }
