@@ -5,6 +5,7 @@ return {
         event = "VeryLazy",
         keys = {
                 { mode = "n", "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle nvim-tree"},
+                { mode = "n", "<leader>E", "<cmd>NvimTreeFocus<CR>", desc = "Toggle nvim-tree"},
         },
         config = function()
                 -- empty setup using defaults
