@@ -10,7 +10,7 @@ return {
                         vim.opt.spelllang = { "en_us" }
                 end,
         },
-        {"hrsh7th/cmp-calc"},
+        {"hrsh7th/cmp-calc"}, -- This is can calculate math by cmp window
 
         {"saadparwaiz1/cmp_luasnip"},
         {
@@ -50,6 +50,7 @@ return {
                                         ['<C-e>'] = cmp.mapping.abort(),
                                         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
                                 }),
+                                -- Add any cmp plugins here
                                 sources = cmp.config.sources({
                                         { name = 'nvim_lsp' },
                                         -- { name = 'vsnip' }, -- For vsnip users.
@@ -69,6 +70,7 @@ return {
                                                         preselect_correct_word = true,
                                                 },
                                         },
+                                        { name = 'calc' },
                                })
                         })
                         -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
