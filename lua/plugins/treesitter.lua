@@ -8,6 +8,7 @@ return {
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				-- Add which language you want
+				-- NOTE: Please run ":TSInstall [language]" command after config target language
 				ensure_installed = {
 					"c",
 					"cpp",
@@ -20,6 +21,7 @@ return {
 					"python",
 					"json",
 					"javascript",
+					"scala",
 				},
 				highlight = {
 					enable = true,

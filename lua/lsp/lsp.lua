@@ -30,7 +30,23 @@ return {
 		config = function()
 			-- Set up lspconfig.
 			local capabilities = require("cmp_nvim_lsp").default_capabilities() -- More details see https://github.com/hrsh7th/nvim-cmp
-			require("lspconfig").lua_ls.setup({ capabilities = capabilities })
+			require("lspconfig").lua_ls.setup({
+				capabilities = capabilities,
+				settings = {
+					Lua = {
+						runtime = {
+							version = "LuaJIT",
+						},
+						workspace = {
+							library = {
+								-- INFO: Add any library here for lua_ls
+								-- vim.fn.expand("/usr/share/xmake/includes/"),
+								vim.fn.expand("/home/theo/Desktop/xmake-luals-addon/"),
+							},
+						},
+					},
+				},
+			})
 			require("lspconfig").clangd.setup({ capabilities = capabilities })
 			require("lspconfig").verible.setup({
 				capabilities = capabilities,
