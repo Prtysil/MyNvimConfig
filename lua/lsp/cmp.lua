@@ -18,6 +18,10 @@ return {
 		config = function()
 			-- More details about this line to see https://github.com/rafamadriz/friendly-snippets
 			require("luasnip.loaders.from_vscode").lazy_load()
+			require("luasnip").filetype_extend("lua", { "luadoc" })
+			require("luasnip").filetype_extend("python", { "pydoc" })
+			require("luasnip").filetype_extend("c", { "cdoc" })
+			require("luasnip").filetype_extend("cpp", { "cppdoc" })
 		end,
 	},
 
@@ -95,6 +99,7 @@ return {
 						},
 						ellipsis_char = "...",
 						show_labelDetails = true,
+						symbol_map = { Codeium = "" },
 						-- before = function (entry, vim_item)
 						--        ...
 						--        return vim_item
@@ -112,7 +117,7 @@ return {
 					end,
 				},
 				window = {
-					-- completion = cmp.config.window.bordered(),
+					completion = cmp.config.window.bordered(),
 					-- documentation = cmp.config.window.bordered(),
 				},
 				mapping = cmp.mapping.preset.insert({
@@ -143,6 +148,7 @@ return {
 						},
 					},
 					{ name = "calc" },
+					{ name = "codeium" },
 				}),
 			})
 			-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
