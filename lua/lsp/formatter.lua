@@ -48,7 +48,7 @@ return {
 		-- Auto exec command FormatWrite while save the file
 		-- More details see https://neovim.io/doc/user/autocmd.html#autocmd
 		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-                        -- Default is "*.*"
+			-- Default is "*.*"
 			-- pattern = { "*.h", "*.hpp", "*.c", "*.cpp", "*.py", "*.lua", "*.v", "CMakeLists.txt" },
 			command = "FormatWrite",
 		})

@@ -22,6 +22,7 @@ return {
 			require("luasnip").filetype_extend("python", { "pydoc" })
 			require("luasnip").filetype_extend("c", { "cdoc" })
 			require("luasnip").filetype_extend("cpp", { "cppdoc" })
+			require("luasnip").filetype_extend("scala", { "scaladoc" })
 		end,
 	},
 

@@ -1,12 +1,9 @@
 return {
 	"scalameta/nvim-metals",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		{
-			"j-hui/fidget.nvim",
-			opts = {},
-		},
-	},
+	dependencies = { "nvim-lua/plenary.nvim", {
+		"j-hui/fidget.nvim",
+		opts = {},
+	} },
 	ft = { "scala", "sbt", "java" },
 	opts = function()
 		local metals_config = require("metals").bare_config()
@@ -18,6 +15,11 @@ return {
 		metals_config.init_options.statusBarProvider = "off"
 		-- Example if you are using cmp how to make sure the correct capabilities for snippets are set
 		metals_config.capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+		-- BUG: This seems not work
+		-- More details please see:
+		-- https://github.com/scalameta/metals/issues/6952
+		metals_config.javaHome = "/usr/lib/jvm/java-23-openjdk"
 
 		metals_config.on_attach = function(client, bufnr)
 			-- your on_attach function
