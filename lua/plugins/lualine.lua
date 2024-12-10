@@ -4,7 +4,9 @@ return {
 
 	config = function()
 		require("lualine").setup({
-			options = { theme = "codedark" },
+			options = {
+				theme = "codedark",
+			},
 
 			-- INFO: For xmake.nvim plugin
 			sections = {
@@ -28,6 +30,7 @@ return {
 						end,
 					},
 				},
+				lualine_c = { { "filename", path = 1 } },
 			},
 		})
 	end,
