@@ -1,5 +1,6 @@
+-- stylua: ignore
 return {
-	"mhartington/formatter.nvim",
+        "mhartington/formatter.nvim",
 	config = function()
 		-- Utilities for creating configurations
 		local util = require("formatter.util")

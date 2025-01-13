@@ -8,7 +8,7 @@ return {
 			-- BUG: This verilog linter seems not work, the nvim-lint doesn' t have verible lint
 			-- more details see
 			-- https://github.com/mfussenegger/nvim-lint
-			verilog = { "verible-verilog-lint" },
+			-- verilog = { "verible-verilog-lint" },
 			lua = { "luacheck" },
 			shell = { "shellcheck" },
 		}

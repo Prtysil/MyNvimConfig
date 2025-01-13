@@ -1,51 +1,20 @@
 return {
-	-- {
-	-- 	"akinsho/toggleterm.nvim",
-	-- 	-- lazy = true,
-	-- 	event = "VeryLazy",
-	-- 	version = "*",
-	-- 	-- opts = {--[[ things you want to change go here]]
-	-- 	-- },
-	-- 	config = function()
-	-- 		require("toggleterm").setup({
-	-- 			terminal_mappings = true,
-	-- 			open_mapping = [[<C-t>]],
-	-- 			direction = "float",
-	-- 			shell = vim.o.shell,
-	-- 			size = 10,
-	-- 			start_in_insert = true,
-	-- 			on_open = function(terminal)
-	-- 				local win = terminal:window()
-	-- 				vim.api.nvim_win_set_option(win, "localdir", vim.fn.getcwd())
-	-- 			end,
-	-- 			on_close = function(terminal)
-	-- 				local win = terminal:window()
-	-- 				vim.api.nvim_win_set_option(win, "localdir", "")
-	-- 			end,
-	-- 			on_exit = function(terminal, exitcode)
-	-- 				print("Exited with code: " .. exitcode)
-	-- 			end,
-	-- 			float_opts = {
-	-- 				-- border = "curved",
-	-- 				-- width = 80,
-	-- 				-- height = 20,
-	-- 				border = "single",
-	-- 				width = 0.8,
-	-- 				height = 0.4,
-	-- 				close_on_esc = true,
-	-- 				shading_factor = 0.9,
-	-- 				relative = "editor",
-	-- 				row = 0.2,
-	-- 				col = 0.2,
-	-- 			},
-	-- 		})
-	--
-	-- 		local Terminal = require("toggleterm.terminal").Terminal
-	-- 		local lazy_term = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float" })
-	-- 		-- 打开终端
-	-- 		vim.keymap.set("n", "<C-Shift-T>", function()
-	-- 			lazy_term:toggle()
-	-- 		end)
-	-- 	end,
-	-- },
+	{
+		"akinsho/toggleterm.nvim",
+		-- lazy = true,
+		event = "VeryLazy",
+		version = "*",
+		-- opts = {--[[ things you want to change go here]]
+		-- },
+		config = function()
+			require("toggleterm").setup({
+				terminal_mappings = true,
+				open_mapping = [[<c-t>]],
+				start_in_insert = true,
+				direction = "float",
+				shell = vim.o.shell,
+				size = 10,
+			})
+		end,
+	},
 }
