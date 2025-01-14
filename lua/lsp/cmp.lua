@@ -150,6 +150,7 @@ return {
 					},
 					{ name = "calc" },
 					{ name = "codeium" },
+					{ name = "render-markdown" },
 				}),
 			})
 			-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
