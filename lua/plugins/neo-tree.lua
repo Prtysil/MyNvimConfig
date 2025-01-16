@@ -48,6 +48,12 @@ return {
 			-- when opening files, do not use windows containing these filetypes or buftypes
 			open_files_do_not_replace_types = { "terminal", "trouble", "qf" },
 			window = {
+				position = "left",
+				width = 30,
+				mapping_options = {
+					noremap = true,
+					nowait = true,
+				},
 				mappings = {
 					["l"] = "open",
 					["h"] = "close_node",
