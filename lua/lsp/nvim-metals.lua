@@ -25,11 +25,11 @@ return {
 			-- your on_attach function
 			-- LSP mappings
 			local map = vim.keymap.set
-			map("n", "gD", vim.lsp.buf.definition)
+			map("n", "gd", vim.lsp.buf.definition)
 			map("n", "K", vim.lsp.buf.hover)
 			map("n", "gi", vim.lsp.buf.implementation)
 			map("n", "gr", vim.lsp.buf.references)
-			map("n", "gds", vim.lsp.buf.document_symbol)
+			map("n", "gDs", vim.lsp.buf.document_symbol)
 			map("n", "gws", vim.lsp.buf.workspace_symbol)
 			map("n", "<leader>cl", vim.lsp.codelens.run)
 			map("n", "<leader>sh", vim.lsp.buf.signature_help)
