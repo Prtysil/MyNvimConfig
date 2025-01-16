@@ -15,4 +15,8 @@ return {
 		{ mode = "n", "<leader>fb", builtin.buffers, desc = "Telescope buffers" },
 		{ mode = "n", "<leader>fp", "<cmd>Telescope projects<cr>", desc = "Telescope project" },
 	},
+
+	config = function()
+		require("telescope").load_extension("projects")
+	end,
 }

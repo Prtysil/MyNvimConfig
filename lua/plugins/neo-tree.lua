@@ -8,6 +8,11 @@ return {
 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
 	event = "VimEnter",
+	opts = {
+		filesystem = {
+			bind_to_cwd = true,
+		},
+	},
 
 	keys = {
 		{
@@ -17,7 +22,6 @@ return {
 			function()
 				require("neo-tree.command").execute({
 					toggle = true,
-					-- dir = require("project_nvim.project").get_project_root(),
 				})
 			end,
 			desc = "Explorer NeoTree (Root Dir)",
