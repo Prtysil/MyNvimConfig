@@ -1,6 +1,7 @@
 return {
 	"akinsho/bufferline.nvim",
 	dependencies = "nvim-tree/nvim-web-devicons",
+	event = "VimEnter",
 	keys = {
 		{ mode = "n", "L", "<cmd>bnext<CR>", desc = "Buffer next" },
 		{ mode = "n", "H", "<cmd>bprevious<CR>", desc = "Buffer previous" },
