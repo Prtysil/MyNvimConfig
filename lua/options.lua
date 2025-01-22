@@ -45,3 +45,11 @@ vim.o.list = false
 vim.o.listchars = "space:·,tab:>-"
 vim.o.wildmenu = true
 vim.o.shortmess = vim.o.shortmess .. "c"
+
+--------------
+-- Neovide ---
+--------------
+-- 缩放比例
+vim.g.neovide_scale_factor = 0.65
+-- 窗口透明度（内容和标题栏统一）
+vim.g.neovide_transparency = 0.8
