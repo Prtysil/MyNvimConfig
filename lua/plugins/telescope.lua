@@ -14,6 +14,7 @@ return {
 		{ mode = "n", "<leader>fw", builtin.grep_string, desc = "Telescope grep cursor choosed string" },
 		{ mode = "n", "<leader>fb", builtin.buffers, desc = "Telescope buffers" },
 		{ mode = "n", "<leader>fp", "<cmd>Telescope projects<cr>", desc = "Telescope project" },
+		{ mode = "n", "<leader>ft", "<cmd>TodoTelescope<cr>", desc = "Todo Telescope" },
 	},
 
 	config = function()
