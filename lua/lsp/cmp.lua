@@ -14,7 +14,7 @@ return {
 	{ "saadparwaiz1/cmp_luasnip" },
 	{
 		"L3MON4D3/LuaSnip",
-		denpendencies = { "rafamadriz/friendly-snippets" },
+		dependencies = { "rafamadriz/friendly-snippets" },
 		config = function()
 			-- More details about this line to see https://github.com/rafamadriz/friendly-snippets
 			require("luasnip.loaders.from_vscode").lazy_load()
