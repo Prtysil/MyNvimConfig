@@ -16,10 +16,12 @@ return {
 		{ mode = "n", "<leader>fb", builtin.buffers, desc = "Telescope buffers" },
 		{ mode = "n", "<leader>fp", "<cmd>Telescope projects<cr>", desc = "Telescope project" },
 		{ mode = "n", "<leader>ft", "<cmd>TodoTelescope<cr>", desc = "Todo Telescope" },
+		{ mode = "n", "<leader>fs", "<cmd>Telescope smart_open<cr>", desc = "Telescope smart open" },
 	},
 
 	config = function()
 		require("telescope").setup({})
 		require("telescope").load_extension("projects")
+		require("telescope").load_extension("smart_open")
 	end,
 }
