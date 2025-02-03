@@ -9,6 +9,26 @@ return {
 		{ mode = "n", "P", "<cmd>BufferLinePick<CR>", desc = "Buffer pick" },
 	},
 	config = function()
-		require("bufferline").setup({})
+		require("bufferline").setup({
+			options = {
+				indicator = {
+					icon = "|",
+					style = "underline",
+				},
+				diagnostics = "nvim_lsp",
+				diagnostics_update_on_event = true,
+				diagnostics_indicator = function(count, level, diagnostics_dict, context)
+					return "(" .. count .. ")"
+				end,
+				offsets = {
+					{
+						filetype = "neo-tree",
+						text = "Neo-tree",
+						highlight = "Directory",
+						text_align = "left",
+					},
+				},
+			},
+		})
 	end,
 }
