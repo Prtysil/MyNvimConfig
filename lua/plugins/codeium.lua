@@ -4,6 +4,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		"hrsh7th/nvim-cmp",
 	},
+	enabled = false,
 
 	-- Enable virtual text
 	-- More details see https://github.com/Exafunction/codeium.nvim
